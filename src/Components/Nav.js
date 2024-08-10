@@ -1,12 +1,10 @@
 import {
-    Button,
-    Link, Navbar, NavbarBrand,
-    NavbarContent, NavbarItem,
+    Navbar,
+    NavbarContent,
     NavbarMenu,
     NavbarMenuItem,
     NavbarMenuToggle
 } from "@nextui-org/react";
-import {color} from "framer-motion";
 import {useState} from "react";
 
 export const Nav = () => {

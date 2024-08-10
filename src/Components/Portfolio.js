@@ -1,8 +1,6 @@
-import {useEffect, useRef, useState} from "react";
 import {PortfolioItem} from "./PortfolioItem";
 
 export const Portfolio = () => {
-    const ref = useRef(null);
 
     const linkList = [
         {link: 'https://cryptorank.io/ico/allora'},
