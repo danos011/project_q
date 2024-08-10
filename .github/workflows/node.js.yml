@@ -24,24 +24,24 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Build
+      - name: static
         env:
           CI: false
         run: |
           npm run build
           echo "Listing contents of the build directory after build:"
-          ls -la build || echo "Build directory does not exist after build!"
+          ls -la static || echo "Build directory does not exist after build!"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: build
+          name: static
+          path: static
 
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    needs: build
+    needs: static
 
     steps:
       - name: Checkout code
@@ -50,7 +50,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
-          name: build
+          name: static
 
       - name: List files in the working directory after downloading artifact
         run: ls -la
