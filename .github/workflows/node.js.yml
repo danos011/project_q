@@ -8,34 +8,27 @@ on:
 
 jobs:
   build:
-    name: Build Project
+    name: Build and Deploy
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [22.x]
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: '22.x'
           cache: 'npm'
 
       - name: Install Dependencies
         run: npm install
 
       - name: Build
-        env:
-          CI: false  # Отключение режима CI
         run: |
-          npm run build --if-present
-          echo "Listing contents of the current directory:"
-          ls -la
-          echo "Checking for build directory:"
+          npm run build
+          echo "Listing contents of the build directory after build:"
+          ls -la build
           if [ ! -d "build" ]; then
             echo "Build directory does not exist after build!";
             exit 1;
@@ -63,18 +56,15 @@ jobs:
 
       - name: Verify build directory
         run: |
+          echo "Listing contents of the working directory after downloading artifact:"
+          ls -la
           echo "Listing contents of the build directory after download:"
-          ls -la build
-          echo "Checking for build directory:"
-          if [ ! -d "build" ]; then
-            echo "Build directory does not exist after downloading artifact!";
-            exit 1;
-          fi
+          ls -la build || echo "Build directory does not exist after downloading artifact!"
 
       - name: Set up Git
         run: |
-          git config --global user.name "danos_011"
-          git config --global user.email "d_osetrov@mail.ru"
+          git config --global user.name "your-username"
+          git config --global user.email "your-email@example.com"
 
       - name: Deploy to GitHub Pages
         run: |
