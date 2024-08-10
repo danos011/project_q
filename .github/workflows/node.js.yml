@@ -29,14 +29,14 @@ jobs:
           CI: false
         run: |
           npm run build
-          echo "Listing contents of the build directory after build:"
-          ls -la build || echo "Build directory does not exist after build!"
+          echo "Listing contents of the static directory after build:"
+          ls -la static || echo "Static directory does not exist after build!"
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
-          name: build
-          path: build
+          name: static
+          path: static
 
   deploy:
     name: Deploy to GitHub Pages
@@ -50,29 +50,29 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
-          name: build
+          name: static
 
       - name: List files in the working directory after downloading artifact
         run: ls -la
 
-      - name: List files in the build directory after download
+      - name: List files in the static directory after download
         run: |
-          if [ -d "build" ]; then
-            echo "Build directory exists:"
-            ls -la build
+          echo "Listing contents of the static directory after download:"
+          if [ -d "static" ]; then
+            ls -la static
           else
-            echo "Build directory does not exist after downloading artifact!"
+            echo "Static directory does not exist after downloading artifact!"
             exit 1
           fi
 
       - name: Set up Git
         run: |
-          git config --global user.name "danos011"
-          git config --global user.email "d_osetrov@mail.ru"
+          git config --global user.name "your-username"
+          git config --global user.email "your-email@example.com"
 
       - name: Deploy to GitHub Pages
         run: |
           npm install -g gh-pages
-          gh-pages -d build -r https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }} -b gh-pages
+          gh-pages -d static -r https://x-access-token:${{ secrets.GH_ACCESS_TOKEN }}@github.com/${{ github.repository }} -b gh-pages
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
