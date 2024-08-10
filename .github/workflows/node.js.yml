@@ -35,6 +35,11 @@ jobs:
       - name: Run Tests
         run: npm test
 
+      - name: Set up Git
+        run: |
+          git config --global user.name "danos_011"
+          git config --global user.email "d_osetrov@mail.ru"
+
       - name: Deploy to GitHub Pages
         run: |
           npm install -g gh-pages
