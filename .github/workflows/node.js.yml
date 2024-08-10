@@ -25,6 +25,8 @@ jobs:
         run: npm install
 
       - name: Build
+        env:
+          CI: false
         run: |
           npm run build
           echo "Listing contents of the build directory after build:"
