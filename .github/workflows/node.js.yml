@@ -32,9 +32,8 @@ jobs:
 
       - name: Deploy with gh-pages
 
-        with:
-            github_token: ${{ secrets.GH_ACCESS_TOKEN }}
-
         run: |
           npm install -g gh-pages
           npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
