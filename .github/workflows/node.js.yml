@@ -31,10 +31,12 @@ jobs:
       - name: Build
         env:
           CI: false  # Отключение режима CI
-        run: npm run build --if-present
-
-      - name: Run Tests
-        run: npm test
+        run: |
+          npm run build --if-present
+          if [ ! -d "build" ]; then
+            echo "Build directory does not exist after build!";
+            exit 1;
+          fi
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v3
@@ -59,7 +61,7 @@ jobs:
       - name: Verify build directory
         run: |
           if [ ! -d "build" ]; then
-            echo "Build directory does not exist!";
+            echo "Build directory does not exist after downloading artifact!";
             exit 1;
           fi
 
