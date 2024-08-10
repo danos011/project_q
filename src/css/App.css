@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.container {
+    position: relative;
+    z-index: 10;
+    color: black;
+    text-align: center;
+    width: 100%;
+}
+
+.container::before {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/gifs/q_bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.left-animation {
+    transform: translateX(-150%);
+    animation: ani-left 1s forwards;
+}
+
+.right-animation {
+    transform: translateX(150%);
+    animation: ani-right 1s forwards;
+}
+
+@keyframes ani-left {
+    0% {
+        transform: translateX(-150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes ani-right {
+    0% {
+        transform: translateX(150%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scale-animation {
+    transition: transform 0.3s ease;
+}
+
+.scale-compressed {
+    transform: scale(0.9);
+}
+
+@font-face {
+    font-family: 'BigStem-Regular';
+    src: url("../../public/fonts/BigStem-Regular.ttf")
+}
+
+@font-face {
+    font-family: 'Bajazo-Th';
+    src: url("../../public/fonts/Bajazzo-Th.otf")
+}
+
+
+
