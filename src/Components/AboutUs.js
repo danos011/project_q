@@ -85,48 +85,50 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
 
 
     return (
-        <section id={'aboutus'} className="p-10 pr-[65px] h-[100vh] flex flex-col gap-[10vh] place-items-center gap-8 w-full">
-            <div className={"flex flex-row gap-3 justify-between"}>
-                <div className={"flex flex-col items-start font-bigstem w-[60%] h-full"}>
-                    <h1 className={"text-[11em] leading-none uppercase"}>
+        <section id={'aboutus'}
+                 className="p-5 lg:p-10 lg:pr-[65px] h-[100vh] flex flex-col gap-[7vh] md:gap-[5vh] md:gap-[10vh] place-items-center w-full">
+            <div className={"flex flex-col md:flex-row gap-3 justify-between"}>
+                <div className={"flex flex-col md:items-start font-bigstem w-full md:w-[60%] md:h-full"}>
+                    <h1 className={"text-[6em] lg:text-[11em] leading-none uppercase"}>
                         {title}
                     </h1>
-                    <div className={"text-6xl uppercase text-[#7e3aae]"}>
+                    <div className={"text-[3em] lg:text-6xl uppercase text-[#7e3aae]"}>
                         {belowTitle}
                     </div>
                 </div>
                 <Card shadow={'none'} radius={"sm"}
-                      className={"w-[40%] p-3 bg-[#32327e]/[0.21] text-white overflow-hidden"}>
+                      className={"w-full md:w-[40%] p-3 bg-[#32327e]/[0.21] text-white overflow-hidden"}>
                     <CardBody className={"flex flex-col gap-1"}>
-                        <h2 className={"text-5xl uppercase font-bigstem font-[200]"}>{boxTitle} <a className={"text-[#7e3aae]"}>{coloredBoxTitle}</a></h2>
-                        <div className={"indent-6 font-bajazzo text-justify uppercase"}>
+                        <h2 className={"text-[2em] lg:text-5xl uppercase font-bigstem font-[200]"}>{boxTitle} <a
+                            className={"text-[#7e3aae]"}>{coloredBoxTitle}</a></h2>
+                        <div className={"text-[0.75em] lg:text-base indent-6 font-bajazzo text-justify uppercase"}>
                             {boxDescription}
                         </div>
                     </CardBody>
                 </Card>
             </div>
             <div
-                className={"flex flex-row gap-8 justify-between uppercase " +
-                    "font-bigstem text-[7em] leading-none w-[80%]"}
+                className={"flex flex-row gap-2 md:gap-8 justify-between uppercase " +
+                    "font-bigstem text-[3em] md:text-[7em] leading-none w-[80%]"}
                 ref={ref}>
-                <div className={"mt-[80px] flex flex-col"}>
+                <div className={"mt-[13vh] flex flex-col"}>
                     <div>web3</div>
-                    <div className={"flex justify-center h-[210px] w-[200px]"}>
-                        <img width={200} height={200} src={ball}
+                    <div className={"flex justify-center h-[10vh] md:h-[25vh] w-[7wv] md:w-[17wv]"}>
+                        <img src={ball}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`} alt={'ball'}/>
                     </div>
                 </div>
                 <div className={"self-start flex flex-col"}>
                     <div>trading</div>
-                    <div className={"flex justify-center h-[210px] w-[200px] ml-[40px]"}>
-                        <img width={200} height={200} alt={'invest'} src={light} loading={'lazy'}
+                    <div className={"flex justify-center h-[10vh] w-[7wv] md:h-[25vh] md:w-[17wv] ml-[2vw]"}>
+                        <img alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
                 <div className={"self-end flex flex-col"}>
                     <div>invest</div>
-                    <div className={"flex justify-center h-[210px] w-[200px]"}>
-                        <img width={200} height={200} alt={'invest'} src={invest} loading={'lazy'}
+                    <div className={"flex justify-center h-[10vh] md:h-[25vh] w-[7wv] md:w-[17wv]"}>
+                        <img alt={'invest'} src={invest} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
