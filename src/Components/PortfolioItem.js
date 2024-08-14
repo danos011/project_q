@@ -28,15 +28,22 @@ export const PortfolioItem = ({item, index}) => {
         };
     }, [hasPlayed]);
 
-    return(
+    return (
         <div key={index} ref={ref} className="flex flex-col w-[calc(50%-1rem)] mb-5">
             <div
-                className={`relative flex flex-row ${index % 2 === 0 ? `justify-start ${hasPlayed ? "left-animation" : ""}` : `justify-end ${hasPlayed ? "right-animation" : ""}`}`}>
-                <div className={`bg-[#32327e] ${index % 2 === 0 ? 'mr-[-8px]' : 'ml-[-8px]'} w-4 z-10`}/>
+                className={`relative flex flex-row ${index % 2 === 0 ? `justify-start ${hasPlayed ? "left-animation" : ""}`
+                    : `justify-end ${hasPlayed ? "right-animation" : ""}`}`}>
+                {index % 2 === 0 &&
+                    <div className={`bg-[#32327e] ${index % 2 === 0 ? 'mr-[-8px]' : 'ml-[-8px]'} w-4 z-10`}/>
+                }
                 <div onClick={() => window.open(item.link)}
-                     className={`cursor-pointer bg-[#32327e]/[0.21] font-bigstem flex items-center leading-none text-[24px] p-2 pt-3 rounded-lg  ${index % 2 === 0 ? 'pl-4' : 'pr-4'} `}>
+                     className={`cursor-pointer bg-[#32327e]/[0.21] font-bigstem flex items-center leading-none 
+                     text-[24px] p-2 pt-3 rounded-lg  ${index % 2 === 0 ? 'pl-4' : 'pr-4'} `}>
                     {item.link}
                 </div>
+                {index % 2 === 1 &&
+                    <div className={`bg-[#32327e] ${index % 2 === 0 ? 'mr-[-8px]' : 'ml-[-8px]'} w-4 z-10`}/>
+                }
             </div>
         </div>
     )

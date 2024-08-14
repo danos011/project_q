@@ -45,7 +45,7 @@ function App() {
                 intro ?
 
                     <video controls={false} autoPlay={true} playsInline={true} muted={true} src="/video/intro_transcoded.mp4"
-                           className={classname}></video>
+                           className={classname}/>
                     :
                     <NextUIProvider className={"container max-w-full overflow-y-hidden"}>
                         <Nav/>

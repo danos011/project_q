@@ -1,12 +1,14 @@
 import {Image} from "@nextui-org/react";
 import {ContactButton} from "./ContactButton";
+import {isMobile} from "react-device-detect";
 
 export const ContactUs = () => {
 
 
     return (
-        <section id={'contactus'} className="p-6 pr-[65px] h-[100vh] flex flex-col gap-[4rem] w-full">
-            <img src="/image/contatUs.png" alt="contactUs" className={"absolute w-fit left-1/2 translate-x-[-50%] translate-y-[-13%]"}/>
+        <section id={'contactus'} className="p-6 pr-[65px] max-h-[100vh] h-[110vh] flex flex-col gap-[30px] w-full">
+            { !isMobile && <img src="/image/contatUs.webp" loading={'lazy'} alt="contactUs"
+                               className={"absolute w-fit left-1/2 translate-x-[-50%] translate-y-[-13%]"}/>}
             <h1 className={"font-bigstem text-9xl text-center"}>
                 contact us
             </h1>
@@ -17,13 +19,13 @@ export const ContactUs = () => {
                     height={315}
                     loading={'lazy'}
                     alt="Q image"
-                    src="/image/q.png"
+                    src="/image/q.webp"
                 />
             </div>
-            <div className={"flex flex-row justify-between h-fit gap-5 px-[5rem] items-stretch"}>
-                <ContactButton image={'/image/telegram.png'} link={"https://t.me/OverheardinQ"} name={'telegram'}/>
-                <ContactButton image={'/image/phone.png'} name={'+7 931 324 4444'} link={"+7 931 324 4444"} CopyToBuffer/>
-                <ContactButton image={'/image/mail.png'} link={"Partner@qventure.ru"} name={'email'} CopyToBuffer/>
+            <div className={"flex flex-col md:flex-row justify-between h-fit gap-5 px-[5rem] items-center"}>
+                <ContactButton image={'/image/telegram.webp'} link={"https://t.me/OverheardinQ"} name={'telegram'}/>
+                <ContactButton image={'/image/phone.webp'} name={'+7 931 324 4444'} link={"+7 931 324 4444"} CopyToBuffer/>
+                <ContactButton image={'/image/mail.webp'} link={"Partner@qventure.ru"} name={'email'} CopyToBuffer/>
             </div>
         </section>
     )

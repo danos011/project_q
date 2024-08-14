@@ -93,12 +93,12 @@
 
 @font-face {
     font-family: 'BigStem-Regular';
-    src: url("../../public/fonts/BigStem-Regular.ttf")
+    src: url("../../public/fonts/BigStem-Regular.woff2") format('woff2')
 }
 
 @font-face {
     font-family: 'Bajazo-Th';
-    src: url("../../public/fonts/Bajazzo-Th.otf")
+    src: url("../../public/fonts/Bajazzo-Th.woff2") format('woff2')
 }
 
 

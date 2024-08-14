@@ -21,7 +21,7 @@ export const Portfolio = () => {
 
     return (
         <section id={'portfolio'} className="p-6 pr-[65px] h-[100vh] flex flex-col gap-[2rem] w-full">
-            <img src="/image/Portfolio.png" alt="Portfolio"
+            <img src="/image/Portfolio.webp" loading={'lazy'} alt="Portfolio"
                  className={"absolute left-1/2 translate-x-[-50%] translate-y-[-20%]"}/>
             <h1 className={"font-bigstem text-9xl text-center"}>
                 portfolio

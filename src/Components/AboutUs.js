@@ -15,9 +15,9 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 '/gifs/invest.gif',
                 '/gifs/ball.gif',
                 '/gifs/lights.gif',
-                '/image/invest.png',
-                '/image/ball.png',
-                '/image/lights.png',
+                '/image/invest.webp',
+                '/image/ball.webp',
+                '/image/lights.webp',
             ];
 
             await Promise.all(imageUrls.map(url => {
@@ -39,17 +39,17 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
     }, []);
 
     useEffect(() => {
-        setInvest("/image/invest.png")
-        setBall("/image/ball.png")
-        setLight("/image/light.png")
+        setInvest("/image/invest.webp")
+        setBall("/image/ball.webp")
+        setLight("/image/light.webp")
     }, [])
 
     useEffect(() => {
         if (gifLoaded) {
             setTimeout(() => {
-                setBall("/image/ball.png");
-                setLight("/image/lights.png");
-                setInvest("/image/invest.png");
+                setBall("/image/ball.webp");
+                setLight("/image/lights.webp");
+                setInvest("/image/invest.webp");
             }, 7000);
         }
     }, [hasPlayed, gifLoaded]);
@@ -76,9 +76,9 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
         return () => {
             if (ref.current) {
                 observer.unobserve(ref.current);
-                setInvest("/image/invest.png")
-                setBall("/image/ball.png")
-                setLight("/image/light.png")
+                setInvest("/image/invest.webp")
+                setBall("/image/ball.webp")
+                setLight("/image/light.webp")
             }
         };
     }, [hasPlayed]);
@@ -119,14 +119,14 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 <div className={"self-start flex flex-col"}>
                     <div>trading</div>
                     <div className={"flex justify-center h-[210px] w-[200px] ml-[40px]"}>
-                        <img width={200} height={200} alt={'invest'} src={light}
+                        <img width={200} height={200} alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
                 <div className={"self-end flex flex-col"}>
                     <div>invest</div>
                     <div className={"flex justify-center h-[210px] w-[200px]"}>
-                        <img width={200} height={200} alt={'invest'} src={invest}
+                        <img width={200} height={200} alt={'invest'} src={invest} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
