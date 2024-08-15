@@ -86,7 +86,7 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
 
     return (
         <section id={'aboutus'}
-                 className="p-5 lg:p-10 lg:pr-[65px] h-[100vh] flex flex-col gap-[7vh] md:gap-[5vh] md:gap-[10vh] place-items-center w-full">
+                 className="p-5 lg:p-10 lg:pr-[65px] h-full flex flex-col gap-[7vh] md:gap-[5vh] md:gap-[10vh] place-items-center w-full">
             <div className={"flex flex-col md:flex-row gap-3 justify-between"}>
                 <div className={"flex flex-col md:items-start font-bigstem w-full md:w-[60%] md:h-full"}>
                     <h1 className={"text-[6em] lg:text-[11em] leading-none uppercase"}>
@@ -108,26 +108,26 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 </Card>
             </div>
             <div
-                className={"flex flex-row gap-2 md:gap-8 justify-between uppercase " +
-                    "font-bigstem text-[3em] md:text-[7em] leading-none w-[80%]"}
+                className={"flex flex-row gap-2 lg:gap-8 justify-between uppercase " +
+                    "font-bigstem text-[3em] lg:text-[7em] leading-none w-full lg:w-[80%]"}
                 ref={ref}>
                 <div className={"mt-[13vh] flex flex-col"}>
                     <div>web3</div>
-                    <div className={"flex justify-center h-[10vh] md:h-[25vh] w-[7wv] md:w-[17wv]"}>
+                    <div className={"flex justify-center h-[13vh] lg:h-[25vh] w-[7wv] lg:w-[17wv]"}>
                         <img src={ball}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`} alt={'ball'}/>
                     </div>
                 </div>
                 <div className={"self-start flex flex-col"}>
                     <div>trading</div>
-                    <div className={"flex justify-center h-[10vh] w-[7wv] md:h-[25vh] md:w-[17wv] ml-[2vw]"}>
+                    <div className={"flex justify-center h-[13vh] w-[7wv] lg:h-[25vh] lg:w-[17wv] ml-[2vw]"}>
                         <img alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
                 <div className={"self-end flex flex-col"}>
                     <div>invest</div>
-                    <div className={"flex justify-center h-[10vh] md:h-[25vh] w-[7wv] md:w-[17wv]"}>
+                    <div className={"flex justify-center h-[13vh] lg:h-[25.6vh] w-[7wv] lg:w-[17.5wv]"}>
                         <img alt={'invest'} src={invest} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>

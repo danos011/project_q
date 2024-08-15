@@ -6,6 +6,7 @@ import {
     NavbarMenuToggle
 } from "@nextui-org/react";
 import {useState} from "react";
+import {NavbarItemCustom} from "./NavbarItemCustom";
 
 export const Nav = () => {
 
@@ -25,7 +26,7 @@ export const Nav = () => {
 
     return (
         <Navbar isBlurred={isMenuOpen} isMenuOpen={isMenuOpen}
-                className={`w-full mt-0 h-full lg:py-4 flex justify-end bg-transparent font-bigstem`}
+                className={`w-full mt-0 h-full py-2 lg:py-4 flex justify-end bg-transparent font-bigstem`}
                 position="sticky"
                 onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent className={"w-[10%]"} justify={'end'}>
@@ -33,75 +34,17 @@ export const Nav = () => {
                                   aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 />
             </NavbarContent>
-            <NavbarMenu  className={"bg-transparent mt-[30px] flex flex-col gap-[4rem]"}>
-                <NavbarMenuItem onClick={() => handleSelect('aboutus')} href={"#about us"}
-                                className={" h-[60px] flex flex-row gap-3"}>
-                    <div className={"w-[5px] h-full bg-white"}/>
-                    <div
-                        color={"foreground"}
-                        className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                    >
-                        сферы деятельности
-                    </div>
-                </NavbarMenuItem>
+            <NavbarMenu className={"bg-transparent p-6 lg:mt-[30px] flex flex-col gap-[4rem]"}>
+                <NavbarItemCustom handleSelect={handleSelect} name={'сферы деятельности'} anchor={'aboutus'}/>
 
                 <div className={"flex flex-col"}>
-                    <NavbarMenuItem onClick={() => handleSelect('web3')} href={"#web3"}
-                                    className={" h-[60px] flex flex-row gap-3"}>
-                        <div className={"w-[5px] h-full bg-white"}/>
-                        <div
-                            color={"foreground"}
-                            className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                        >
-                            web3
-                        </div>
-                    </NavbarMenuItem>
-
-                    <NavbarMenuItem onClick={() => handleSelect('trading')} href={"#trading"}
-                                    className={" h-[60px] flex flex-row gap-3"}>
-                        <div className={"w-[5px] h-full bg-white"}/>
-                        <div
-                            color={"foreground"}
-                            className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                        >
-                            трейдинг
-                        </div>
-                    </NavbarMenuItem>
-
-                    <NavbarMenuItem onClick={() => handleSelect('invest')} href={"#invest"}
-                                    className={" h-[60px] flex flex-row gap-3"}>
-                        <div className={"w-[5px] h-full bg-white"}/>
-                        <div
-                            color={"foreground"}
-                            className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                        >
-                            инвестиции
-                        </div>
-                    </NavbarMenuItem>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'web3'} anchor={'web3'}/>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'трейдинг'} anchor={'trading'}/>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'инвестиции'} anchor={'invest'}/>
                 </div>
 
-                <NavbarMenuItem onClick={() => handleSelect('portfolio')} href={"#portfolio"}
-                                className={" h-[60px] flex flex-row gap-3"}>
-                    <div className={"w-[5px] h-full bg-white"}/>
-                    <div
-                        color={"foreground"}
-                        className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                    >
-                        портфолио
-                    </div>
-                </NavbarMenuItem>
-
-                <NavbarMenuItem onClick={() => handleSelect('contactus')} href={"#contactus"}
-                                className={" h-[60px] flex flex-row gap-3"}>
-                    <div className={"w-[5px] h-full bg-white"}/>
-                    <div
-                        color={"foreground"}
-                        className="w-full pt-4 text-white bg-transparent  uppercase cursor-pointer text-[3em] hover:text-[#7e3aae]"
-                    >
-                        контакты
-                    </div>
-                </NavbarMenuItem>
-
+                <NavbarItemCustom handleSelect={handleSelect} name={'портфолио'} anchor={'portfolio'}/>
+                <NavbarItemCustom handleSelect={handleSelect} name={'контакты'} anchor={'contactus'}/>
             </NavbarMenu>
         </Navbar>
     )

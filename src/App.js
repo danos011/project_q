@@ -44,7 +44,8 @@ function App() {
             {
                 intro ?
 
-                    <video controls={false} autoPlay={true} playsInline={true} muted={true} src="/video/intro_transcoded.mp4"
+                    <video controls={false} autoPlay={true} playsInline={true} muted={true}
+                           src="/video/intro_transcoded.mp4"
                            className={classname}/>
                     :
                     <NextUIProvider className={"container max-w-full overflow-y-hidden"}>
@@ -75,7 +76,8 @@ function App() {
                             <PageWithText title={'Инвес'} coloredText={'тиции'} afterTitle={"Венчур"} textId={'invest'}
                                           description={"Инвестиции в стартапы, оценивая их риски, с учетом анализа трендов, " +
                                               "предлагая собственные аналитические инструменты и технологические решения, " +
-                                              "а также обеспечивая необходимую финансовую поддержку."}/>
+                                              "а также обеспечивая необходимую финансовую поддержку. " +
+                                              "Инвестируя ваши средства вы гарантированно получаете 5% от ваших вложений ежемесячно!"}/>
 
 
                             <Portfolio/>

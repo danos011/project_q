@@ -1,9 +1,8 @@
 import {Card, CardBody, Image} from "@nextui-org/react";
 import {useState} from "react";
 
-export const ContactButton = ({image, link, name, CopyToBuffer = false}) => {
+export const ContactButton = ({image, link, name, type}) => {
     const [isPressed, setIsPressed] = useState(false);
-    const [isCopy, setIsCopy] = useState(false);
 
     const handleMouseDown = () => {
         setIsPressed(!isPressed);
@@ -14,55 +13,45 @@ export const ContactButton = ({image, link, name, CopyToBuffer = false}) => {
     };
 
     const handleNewWindow = () => {
-        window.open(link);
+        if (type === 'tel') {
+            window.open(link);
+        }
     }
 
-    const handleCopyToBuffer = () => {
-        setIsCopy(true)
-        navigator.clipboard.writeText(link)
-            .catch(err => {
-                console.log('Something went wrong', err);
-            });
-        setTimeout(() => {
-            setIsCopy(false)
-        }, 3000);
+    const getHref = () => {
+        switch (type) {
+            case 'email':
+                return 'mailto: Partner@qventure.ru'
+            case 'phone':
+                return 'tel:+79313244444'
+            default:
+                return '#'
+        }
     }
 
 
     return (
-        <div onMouseDown={handleMouseDown}
-             onMouseUp={handleMouseUp}
-             onClick={CopyToBuffer ? handleCopyToBuffer : handleNewWindow}
-             className={`flex flex-col self-end mb-4 cursor-pointer ${isPressed ? 'scale-compressed' : ''} 
-             scale-animation ${name === '+7 931 324 4444' ? "mt-8" : null}`}>
-
-            {name === '+7 931 324 4444' ?
-                <div className={"ml-7 h-full"}>
-                    <Image
-                        width={120}
-                        height={120}
+        <a
+            onMouseDown={handleMouseDown}
+            onMouseUp={handleMouseUp}
+            onClick={handleNewWindow}
+            href={getHref}
+            className={`flex flex-col items-center mb-4 cursor-pointer transition-transform ${isPressed ? 'scale-90' : 'scale-100'}`}
+        >
+            {type !== 'phone' && (
+                <div className="w-16 h-16 md:w-24 md:h-24 mb-2">
+                    <img
                         src={image}
+                        alt={type}
+                        className="w-full h-full object-cover rounded-full"
                     />
                 </div>
-                :
-                <div className={"h-full"}>
-                    <Image
-                        width={180}
-                        height={180}
-                        src={image}
-                    />
-                </div>
-            }
-            <Card shadow={'none'} radius={"sm"}
-                  className={`bg-[#32327e]/[0.21] text-white w-[185px] h-[52px] ${name !== '+7 931 324 4444' ? "mb-10" : 'mt-4'}`}>
-                <CardBody
-                    className={"px-10 py-3 flex justify-center items-center font-bigstem text-xl font-thin uppercase text-wrap"}>
-                    {CopyToBuffer ?
-                        isCopy ? <div className={"text-base"}>Скопрованно в буфер</div> :
-                            name
-                        : name}
+            )}
+            <Card shadow="none" radius="sm" className="bg-[#32327e]/[0.21] text-white w-24 h-16 md:w-32 md:h-12 flex items-center justify-center">
+                <CardBody className="justify-center p-0 md:py-2 text-center font-light text-sm text-xl uppercase font-bigstem">
+                    {name}
                 </CardBody>
             </Card>
-        </div>
+        </a>
     )
 }
