@@ -1,4 +1,4 @@
-import {Card, CardBody, Image} from "@nextui-org/react";
+import {Card, CardBody} from "@nextui-org/react";
 import {useState} from "react";
 
 export const ContactButton = ({image, link, name, type}) => {
@@ -35,7 +35,7 @@ export const ContactButton = ({image, link, name, type}) => {
             onMouseDown={handleMouseDown}
             onMouseUp={handleMouseUp}
             onClick={handleNewWindow}
-            href={getHref}
+            href={getHref()}
             className={`flex flex-col items-center mb-4 cursor-pointer transition-transform ${isPressed ? 'scale-90' : 'scale-100'}`}
         >
             {type !== 'phone' && (

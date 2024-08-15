@@ -5,67 +5,67 @@ export const Portfolio = () => {
 
     const linkList = [
         {
-            link: 'https://cryptorank.io/ico/allora',
+            link: 'https://www.allora.network',
             name: 'Allora',
             image: '/image/allora.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/gudchain',
+            link: 'https://gudchain.com',
             name: 'Gudchain',
             image: '/image/gud.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/zkx',
+            link: 'https://zkx.fi',
             name: 'ZKX',
             image: '/image/zkx.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/renzo-protocol',
+            link: 'https://www.renzoprotocol.com',
             name: 'Renzo',
             image: '/image/renzo.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/bring',
+            link: 'https://bringsocial.com',
             name: 'Bring',
             image: '/image/bring.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/agentlayer',
+            link: 'https://agentlayer.xyz',
             name: 'AgentLayer',
             image: '/image/agent.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/wasabi',
+            link: 'https://www.wasabi.xyz',
             name: 'Wasabi',
             image: '/image/wasabi.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/holdstation',
+            link: 'https://holdstation.com',
             name: 'Holdstation',
             image: '/image/hold.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/rio-network',
+            link: 'https://updates.rio.network/updates/eigen-labs-infinity-rio-network',
             name: 'Rio Network',
             image: '/image/rio.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/zyfi',
+            link: 'https://www.zyfi.org',
             name: 'Zyfi',
             image: '/image/zyfi.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/codatta',
+            link: 'https://codatta.io',
             name: 'codatta',
             image: '/image/codatta.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/kimafinance#funding-rounds',
+            link: 'https://kima.finance',
             name: 'Kima',
             image: '/image/kima.webp',
         },
         {
-            link: 'https://cryptorank.io/ico/bluwhale',
+            link: 'https://www.bluwhale.com',
             name: 'Bluwhale',
             image: '/image/bluewave.webp',
         },
