@@ -26,7 +26,7 @@ export const Nav = () => {
 
     return (
         <Navbar isBlurred={isMenuOpen} isMenuOpen={isMenuOpen}
-                className={`w-full mt-0 h-full py-2 lg:py-4 flex justify-end bg-transparent font-bigstem`}
+                className={`w-full mt-0 h-full lg:py-2 lg:py-4 flex justify-end bg-transparent font-bigstem`}
                 position="sticky"
                 onMenuOpenChange={setIsMenuOpen}>
             <NavbarContent className={"w-[10%]"} justify={'end'}>

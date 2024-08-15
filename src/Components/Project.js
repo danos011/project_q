@@ -16,12 +16,13 @@ export const Project = ({fadeOut}) => {
                  className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
             {!isMobile &&
                 <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}
-            <div className={`flex flex-col h-[20%] md:gap-0 md:h-[20%] md:w-[40%] items-center content-center ${fadeOut ? 'fade-in' : ''} `}>
+            <div className={`flex flex-col h-[30%] lg:gap-0 md:h-[20%] md:w-[40%] items-center content-center ${fadeOut ? 'fade-in' : ''} `}>
                 <div
-                    className={"h-full mb-[5vw] md:mb-0  w-full text-start md:text-center content-end uppercase text-8xl md:text-9xl leading-10 tracking-tighter font-bigstem left-animation"}>
+                    className={"h-full mb-[5vw] md:mb-0 w-full text-start md:text-center content-end " +
+                        "uppercase text-8xl md:text-9xl leading-10 tracking-tighter font-bigstem left-animation"}>
                     we are
                 </div>
-                <div className={"bg-white w-[30vw] lg:w-[120px] ml-[-61vw] lg:ml-0 md:mr-[100px] h-[1vh] left-animation"}/>
+                <div className={"bg-white w-[30vw] lg:w-[120px] ml-[-61vw] md:ml-[0vw] lg:ml-0 lg:mr-[100px] h-[1vh] left-animation"}/>
             </div>
             <div className={"flex mx-auto min-h-[50vh] lg:h-fit md:w-fit"}>
                 <img
@@ -33,7 +34,7 @@ export const Project = ({fadeOut}) => {
                 className={`flex flex-col w-full md:gap-0 h-[20%] lg:w-[40%] md:items-center text-8xl leading-10 tracking-tighter ${fadeOut ? 'fade-in' : ''}` +
                     "font-bigstem lg:mt-[400px]"}>
                 <div
-                    className={"uppercase h-full pt-[4vh] lg:pt-0 w-full items-end text-end lg:text-center content-center md:text-6xl md:text-9xl leading-10 tracking-tighter font-bigstem right-animation"}>
+                    className={"uppercase h-full pt-[2vh] md:pt-[4vh] lg:pt-0 w-full items-end text-end lg:text-center content-center md:text-6xl md:text-9xl leading-10 tracking-tighter font-bigstem right-animation"}>
                     project
                 </div>
                 <div className={"bg-white w-[30vw] lg:w-[210px] items-end h-[1vh] ml-[61vw] lg:ml-[30px] right-animation"}/>
