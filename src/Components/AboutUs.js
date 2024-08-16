@@ -109,25 +109,25 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
             </div>
             <div
                 className={"flex flex-row gap-2 lg:gap-8 justify-between uppercase " +
-                    "font-bigstem text-[3em] lg:text-[7em] leading-none w-full lg:w-[80%]"}
+                    "font-bigstem text-[3em] lg:text-[7em] leading-none w-full lg:w-[100%]"}
                 ref={ref}>
-                <div className={"mt-[13vh] flex flex-col lg:w-[33%]"}>
+                <div className={"mt-[13vh] flex w-[33%] flex-col lg:w-[33%]"}>
                     <div>web3</div>
-                    <div className={"flex justify-center h-[13vh] lg:h-[25vh] w-[7wv] lg:w-[17wv]"}>
+                    <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25vh]"}>
                         <img src={ball}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`} alt={'ball'}/>
                     </div>
                 </div>
-                <div className={"self-start flex flex-col lg:w-[33%]"}>
+                <div className={"self-start w-[33%] flex flex-col lg:w-[33%]"}>
                     <div>trading</div>
-                    <div className={"flex justify-center h-[13vh] w-[7wv] lg:h-[25vh] lg:w-[17wv] ml-[2vw]"}>
+                    <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25vh] "}>
                         <img alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
-                <div className={"self-end flex flex-col lg:w-[33%]"}>
+                <div className={"self-end flex w-[33%] flex-col lg:w-[33%]"}>
                     <div>invest</div>
-                    <div className={"flex justify-center h-[13vh] lg:h-[25.6vh] w-[7wv] lg:w-[17.5wv]"}>
+                    <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25.6vh] "}>
                         <img alt={'invest'} src={invest} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>

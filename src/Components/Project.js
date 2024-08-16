@@ -16,9 +16,9 @@ export const Project = ({fadeOut}) => {
                  className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[100vh] flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
             {!isMobile &&
                 <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}
-            <div className={`flex flex-col h-[30%] lg:gap-0 md:h-[20%] md:w-[40%] items-center content-center ${fadeOut ? 'fade-in' : ''} `}>
+            <div className={`flex flex-col h-[25%] md:h-[20%] md:w-[40%] items-center content-center ${fadeOut ? 'fade-in' : ''} `}>
                 <div
-                    className={"h-full mb-[5vw] md:mb-0 w-full text-start md:text-center content-end " +
+                    className={"h-full md:mb-0 w-full text-start md:text-center content-end " +
                         "uppercase text-8xl md:text-9xl leading-10 tracking-tighter font-bigstem left-animation"}>
                     we are
                 </div>
@@ -26,7 +26,7 @@ export const Project = ({fadeOut}) => {
             </div>
             <div className={"flex mx-auto min-h-[50vh] lg:h-fit md:w-fit"}>
                 <img
-                    className={'object-cover max-h-[40vh] mt-[6vw] min-h-[40vh] min-w-[235px] lg:max-h-[408px] items-center md:items-stretch rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] ml-2 lg:mt-14 opacity-1'}
+                    className={'object-cover max-h-[40vh] mt-[6vw] min-h-[40vh] min-w-[30vh] lg:max-h-[408px] items-center md:items-stretch rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] ml-2 lg:mt-14 opacity-1'}
                     alt="Q"
                     src="/image/q.webp"/>
             </div>

@@ -5,9 +5,9 @@ export const PageWithText = ({title, coloredText, afterTitle, description, textI
 
     return (
         <section id={textId}
-                 className="p-5 lg:p-10 lg:pr-[65px] h-full lg:h-[100vh] flex flex-col gap-4 items-center w-fit">
+                 className="p-5 lg:p-10 lg:pr-[65px] h-full lg:h-[100vh] flex flex-col gap-4 items-center w-full">
             <div className={"flex flex-col justify-between font-bigstem"}>
-                <h1 className={"text-[6em] md:text-[8em] lg:text-9xl uppercase"}>
+                <h1 className={"text-[4em] md:text-[8em] lg:text-9xl uppercase"}>
                     {title}<a className={"text-[#7e3aae]"}>{coloredText}</a>
                 </h1>
                 <div className={"text-4xl md:text-5xl lg:text-6xl uppercase"}>
