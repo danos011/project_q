@@ -1,12 +1,6 @@
-import {
-    Navbar,
-    NavbarContent,
-    NavbarMenu,
-    NavbarMenuItem,
-    NavbarMenuToggle
-} from "@nextui-org/react";
 import {useState} from "react";
 import {NavbarItemCustom} from "./NavbarItemCustom";
+import {Navbar, NavbarContent, NavbarMenu, NavbarMenuToggle} from "@nextui-org/navbar";
 
 export const Nav = () => {
 

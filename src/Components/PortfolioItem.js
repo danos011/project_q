@@ -43,7 +43,7 @@ export const PortfolioItem = ({item, index}) => {
                             }
                             <div onClick={() => window.open(item.link)}
                                  className={`cursor-pointer bg-[#32327e]/[0.21] font-bigstem flex items-center justify-center text-center leading-none
-                            text-[30px] p-2 pt-3 rounded-lg px-4 w-[30%]`}>
+                            text-lg md:text-[30px] p-2 pt-3 rounded-lg px-4 w-[30%]`}>
                                 {item.name}
                             </div>
                             {index % 2 === 1 &&

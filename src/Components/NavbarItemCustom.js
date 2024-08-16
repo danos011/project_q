@@ -1,4 +1,5 @@
-import {NavbarMenuItem} from "@nextui-org/react";
+import {NavbarMenuItem} from "@nextui-org/navbar";
+
 
 export const NavbarItemCustom = ({handleSelect, anchor, name}) => {
     return <>

@@ -1,10 +1,10 @@
-const {nextui} = require("@nextui-org/react");
+const {nextui} = require("@nextui-org/theme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         './src/**/*.{js,ts,jsx,tsx}',
-        "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+        './node_modules/@nextui-org/theme/dist/components/(navbar|card).js',
     ],
     theme: {
         extend: {

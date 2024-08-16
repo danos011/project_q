@@ -1,7 +1,5 @@
 import './css/App.css';
-import {
-    NextUIProvider,
-} from "@nextui-org/react";
+import {NextUIProvider} from "@nextui-org/system";
 import {Nav} from "./Components/Nav";
 import {ContactUs} from "./Components/ContactUs";
 import {Project} from "./Components/Project";

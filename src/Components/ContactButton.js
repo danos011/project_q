@@ -1,5 +1,5 @@
-import {Card, CardBody} from "@nextui-org/react";
 import {useState} from "react";
+import {Card, CardBody} from "@nextui-org/card";
 
 export const ContactButton = ({image, link, name, type}) => {
     const [isPressed, setIsPressed] = useState(false);
@@ -47,8 +47,8 @@ export const ContactButton = ({image, link, name, type}) => {
                     />
                 </div>
             )}
-            <Card shadow="none" radius="sm" className="bg-[#32327e]/[0.21] text-white w-24 h-16 md:w-32 md:h-12 flex items-center justify-center">
-                <CardBody className="justify-center p-0 md:py-2 text-center font-light text-sm text-xl uppercase font-bigstem">
+            <Card shadow="none" radius="sm" className={`bg-[#32327e]/[0.21] text-white  h-16 w-full md:h-12 flex items-center justify-center`}>
+                <CardBody className={`justify-center md:py-2 text-center font-light text-sm md:text-2xl uppercase font-bigstem`}>
                     {name}
                 </CardBody>
             </Card>

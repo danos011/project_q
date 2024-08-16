@@ -1,5 +1,5 @@
-import {Card, CardBody} from "@nextui-org/react";
 import {useEffect, useRef, useState} from "react";
+import {Card, CardBody} from "@nextui-org/card";
 
 export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBoxTitle}) => {
     const [hasPlayed, setHasPlayed] = useState(false);
@@ -32,7 +32,7 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 });
             }));
 
-            setGifLoaded(true); // Устанавливаем состояние после загрузки
+            setGifLoaded(true);
         };
 
         preloadImages().then();
@@ -89,7 +89,7 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                  className="p-5 lg:p-10 lg:pr-[65px] h-full flex flex-col gap-[7vh] md:gap-[5vh] md:gap-[10vh] place-items-center w-full">
             <div className={"flex flex-col md:flex-row gap-3 justify-between"}>
                 <div className={"flex flex-col md:items-start font-bigstem w-full md:w-[60%] md:h-full"}>
-                    <h1 className={"text-[6em] lg:text-[11em] leading-none uppercase"}>
+                    <h1 className={"text-[6em] md:text-[8em] lg:text-9xl leading-none uppercase"}>
                         {title}
                     </h1>
                     <div className={"text-[3em] lg:text-6xl uppercase text-[#7e3aae]"}>
@@ -111,21 +111,21 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 className={"flex flex-row gap-2 lg:gap-8 justify-between uppercase " +
                     "font-bigstem text-[3em] lg:text-[7em] leading-none w-full lg:w-[80%]"}
                 ref={ref}>
-                <div className={"mt-[13vh] flex flex-col"}>
+                <div className={"mt-[13vh] flex flex-col lg:w-[33%]"}>
                     <div>web3</div>
                     <div className={"flex justify-center h-[13vh] lg:h-[25vh] w-[7wv] lg:w-[17wv]"}>
                         <img src={ball}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`} alt={'ball'}/>
                     </div>
                 </div>
-                <div className={"self-start flex flex-col"}>
+                <div className={"self-start flex flex-col lg:w-[33%]"}>
                     <div>trading</div>
                     <div className={"flex justify-center h-[13vh] w-[7wv] lg:h-[25vh] lg:w-[17wv] ml-[2vw]"}>
                         <img alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
-                <div className={"self-end flex flex-col"}>
+                <div className={"self-end flex flex-col lg:w-[33%]"}>
                     <div>invest</div>
                     <div className={"flex justify-center h-[13vh] lg:h-[25.6vh] w-[7wv] lg:w-[17.5wv]"}>
                         <img alt={'invest'} src={invest} loading={'lazy'}

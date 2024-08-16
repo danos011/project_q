@@ -1,17 +1,16 @@
-import {Card, CardBody, Image} from "@nextui-org/react";
 import {ContactButton} from "./ContactButton";
 import {isMobile} from "react-device-detect";
-import {useState} from "react";
+import {Image} from "@nextui-org/image";
 
 export const ContactUs = () => {
 
 
     return (
         <section id={'contactus'}
-                 className="p-5 md:p-6 lg:pr-[65px] max-h-[90vh] h-[90vh] flex flex-col gap-[30px] w-full">
+                 className="p-5 md:p-6 lg:pr-[65px] h-[100vh] flex flex-col gap-[30px] w-full">
             {!isMobile && <img src="/image/contatUs.webp" loading={'lazy'} alt="contactUs"
                                className={"absolute w-fit left-1/2 translate-x-[-50%] translate-y-[-13%]"}/>}
-            <h1 className={"pt-3 font-bigstem text-7xl md:text-9xl text-center"}>
+            <h1 className={"pt-3 font-bigstem text-[6em] md:text-[8em] lg:text-9xl text-center"}>
                 contact us
             </h1>
             <div className={"block mx-auto h-full"}>

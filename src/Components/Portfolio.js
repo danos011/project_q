@@ -81,7 +81,7 @@ export const Portfolio = () => {
             </h1>
             <div className="flex flex-wrap gap-3 md:gap-5 px-6 lg:pl-[5rem] lg:pr-[1rem] pb-10">
                 {linkList.map((item, index) => (
-                    <PortfolioItem item={item} index={index}/>
+                    <PortfolioItem key={index} item={item} index={index}/>
                 ))}
             </div>
         </section>
