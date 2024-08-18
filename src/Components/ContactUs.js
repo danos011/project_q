@@ -10,12 +10,12 @@ export const ContactUs = () => {
                  className="p-5 md:p-6 lg:pr-[65px] h-[100vh] flex flex-col gap-[30px] w-full">
             {!isMobile && <img src="/image/contatUs.webp" loading={'lazy'} alt="contactUs"
                                className={"absolute w-fit left-1/2 translate-x-[-50%] translate-y-[-13%]"}/>}
-            <h1 className={"pt-3 font-bigstem text-[6em] md:text-[8em] lg:text-9xl text-center"}>
+            <h1 className={"font-bigstem text-[5em] md:text-[8em] lg:text-9xl text-center"}>
                 contact us
             </h1>
-            <div className={"block mx-auto h-full"}>
+            <div className={"flex items-center  mx-auto h-full"}>
                 <Image
-                    className={'h-fit pt-[4vh] rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
+                    className={'h-fit md:pt-[4vh] rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
                     width={250}
                     height={315}
                     loading={'lazy'}

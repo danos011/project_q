@@ -19,27 +19,36 @@ export const Nav = () => {
     };
 
     return (
-        <Navbar isBlurred={isMenuOpen} isMenuOpen={isMenuOpen}
-                className={`w-full mt-0 h-full lg:py-2 lg:py-4 flex justify-end bg-transparent font-bigstem`}
-                position="sticky"
-                onMenuOpenChange={setIsMenuOpen}>
-            <NavbarContent className={"w-[10%]"} justify={'end'}>
-                <NavbarMenuToggle className={"text-white"} isSelected={true}
-                                  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                />
-            </NavbarContent>
-            <NavbarMenu className={"bg-transparent p-6 lg:mt-[30px] flex flex-col gap-[4rem]"}>
-                <NavbarItemCustom handleSelect={handleSelect} name={'сферы деятельности'} anchor={'aboutus'}/>
+        <>
+            <style>{
+                isMenuOpen ?
+                    `body {
+                        overflow: hidden;
+                    }` :
+                    null
+            }</style>
+            <Navbar isBlurred={isMenuOpen} isMenuOpen={isMenuOpen}
+                    className={`w-full mt-0 h-full lg:py-2 lg:py-4 flex justify-end bg-transparent font-bigstem`}
+                    position="sticky"
+                    onMenuOpenChange={setIsMenuOpen}>
+                <NavbarContent className={"w-[10%]"} justify={'end'}>
+                    <NavbarMenuToggle className={"text-white"} isSelected={true}
+                                      aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    />
+                </NavbarContent>
+                <NavbarMenu className={"bg-transparent p-6 lg:mt-[30px] flex flex-col gap-[4rem]"}>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'сферы деятельности'} anchor={'aboutus'}/>
 
-                <div className={"flex flex-col"}>
-                    <NavbarItemCustom handleSelect={handleSelect} name={'web3'} anchor={'web3'}/>
-                    <NavbarItemCustom handleSelect={handleSelect} name={'трейдинг'} anchor={'trading'}/>
-                    <NavbarItemCustom handleSelect={handleSelect} name={'инвестиции'} anchor={'invest'}/>
-                </div>
+                    <div className={"flex flex-col"}>
+                        <NavbarItemCustom handleSelect={handleSelect} name={'web3'} anchor={'web3'}/>
+                        <NavbarItemCustom handleSelect={handleSelect} name={'трейдинг'} anchor={'trading'}/>
+                        <NavbarItemCustom handleSelect={handleSelect} name={'инвестиции'} anchor={'invest'}/>
+                    </div>
 
-                <NavbarItemCustom handleSelect={handleSelect} name={'портфолио'} anchor={'portfolio'}/>
-                <NavbarItemCustom handleSelect={handleSelect} name={'контакты'} anchor={'contactus'}/>
-            </NavbarMenu>
-        </Navbar>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'портфолио'} anchor={'portfolio'}/>
+                    <NavbarItemCustom handleSelect={handleSelect} name={'контакты'} anchor={'contactus'}/>
+                </NavbarMenu>
+            </Navbar>
+        </>
     )
 }

@@ -13,16 +13,20 @@ export const Project = ({fadeOut}) => {
 
     return (
         <section id={'project'}
-                 className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[100vh] flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
-            {!isMobile &&
-                <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}
-            <div className={`flex flex-col h-[25%] md:h-[20%] md:w-[40%] items-center content-center ${fadeOut ? 'fade-in' : ''} `}>
+                 className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[100vh]" +
+                     " flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
+            {/*{!isMobile &&*/}
+            {/*    <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}*/}
+            <div
+                className={`flex flex-col justify-between gap-5 h-[25%] md:h-[20%] md:w-[40%] items-center ${fadeOut ? 'fade-in' : ''}`}>
+                <div className="w-full flex-grow" />
                 <div
-                    className={"h-full md:mb-0 w-full text-start md:text-center content-end " +
-                        "uppercase text-8xl md:text-9xl leading-10 tracking-tighter font-bigstem left-animation"}>
+                    className="w-full text-start md:text-center justify-end uppercase text-[5em] md:text-[7em] lg:text-9xl leading-10 tracking-tighter font-bigstem left-animation">
                     we are
                 </div>
-                <div className={"bg-white w-[30vw] lg:w-[120px] ml-[-61vw] md:ml-[0vw] lg:ml-0 lg:mr-[100px] h-[1vh] left-animation"}/>
+
+                <div
+                    className="bg-white w-[120px] lg:ml-[250px] mr-auto h-[1vh] left-animation"/>
             </div>
             <div className={"flex mx-auto min-h-[50vh] lg:h-fit md:w-fit"}>
                 <img
@@ -31,15 +35,17 @@ export const Project = ({fadeOut}) => {
                     src="/image/q.webp"/>
             </div>
             <div
-                className={`flex flex-col w-full md:gap-0 h-[20%] lg:w-[40%] md:items-center text-8xl leading-10 tracking-tighter ${fadeOut ? 'fade-in' : ''}` +
+                className={`flex flex-col gap-4 w-full h-[20%] lg:w-[40%] md:items-center leading-10 tracking-tighter ${fadeOut ? 'fade-in' : ''}` +
                     "font-bigstem lg:mt-[400px]"}>
                 <div
-                    className={"uppercase h-full pt-[2vh] md:pt-[4vh] lg:pt-0 w-full items-end text-end lg:text-center content-center md:text-6xl md:text-9xl leading-10 tracking-tighter font-bigstem right-animation"}>
+                    className={"flex uppercase h-full w-full items-end lg:text-center " +
+                        "content-center text-[5em] justify-end md:justify-center md:text-[7em] lg:text-9xl leading-10 tracking-tighter font-bigstem right-animation"}>
                     project
                 </div>
-                <div className={"bg-white w-[30vw] lg:w-[12vw] items-end h-[1vh] ml-[61vw] lg:ml-[30px] right-animation"}/>
+                <div
+                    className={"bg-white justify-end ml-auto w-[120px] md:w-[100px] lg:w-[200px] md:items-end h-[1vh]  lg:mr-[12vw]  right-animation"}/>
             </div>
-            {!isMobile && <img src="/image/we.webp" alt="we" className={"absolute left-0 left-animation"}/>}
+            {/*{!isMobile && <img src="/image/we.webp" alt="we" className={"absolute left-0 left-animation"}/>}*/}
         </section>
     )
 }

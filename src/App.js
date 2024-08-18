@@ -7,12 +7,20 @@ import {AboutUs} from "./Components/AboutUs";
 import {PageWithText} from "./Components/PageWithText";
 import {useEffect, useState} from "react";
 import {Portfolio} from "./Components/Portfolio";
+import reportWebVitals from "./reportWebVitals";
 
 
 function App() {
     const [intro, setIntro] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
     const [classname, setClassName] = useState('');
+
+    useEffect(() => {
+        reportWebVitals((metric) => {
+            console.log(metric);
+            // Отправка данных в вашу систему мониторинга или аналитику
+        });
+    }, []);
 
     useEffect(() => {
         if (!intro) {
@@ -43,7 +51,7 @@ function App() {
                 intro ?
 
                     <video controls={false} autoPlay={true} playsInline={true} muted={true}
-                           src="/video/intro_transcoded.mp4"
+                           src="/video/intro_transcoded.webm"
                            className={classname}/>
                     :
                     <NextUIProvider className={"container max-w-full overflow-y-hidden"}>
