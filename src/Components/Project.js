@@ -13,20 +13,21 @@ export const Project = ({fadeOut}) => {
 
     return (
         <section id={'project'}
-                 className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[100vh]" +
+                 className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[115vh]" +
                      " flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
-            {/*{!isMobile &&*/}
-            {/*    <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}*/}
+            {!isMobile &&
+                <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}
             <div
                 className={`flex flex-col justify-between gap-5 h-[25%] md:h-[20%] md:w-[40%] items-center ${fadeOut ? 'fade-in' : ''}`}>
                 <div className="w-full flex-grow" />
                 <div
-                    className="w-full text-start md:text-center justify-end uppercase text-[5em] md:text-[7em] lg:text-9xl leading-10 tracking-tighter font-bigstem left-animation">
+                    className="w-full text-start md:text-center justify-end
+                    uppercase text-[5em] md:text-[7em] lg:text-9xl leading-10 tracking-tighter font-bigstem left-animation">
                     we are
                 </div>
 
                 <div
-                    className="bg-white w-[120px] lg:ml-[250px] mr-auto h-[1vh] left-animation"/>
+                    className="bg-white w-[120px] lg:ml-[13vw] mr-auto h-[8px] left-animation"/>
             </div>
             <div className={"flex mx-auto min-h-[50vh] lg:h-fit md:w-fit"}>
                 <img
@@ -43,9 +44,9 @@ export const Project = ({fadeOut}) => {
                     project
                 </div>
                 <div
-                    className={"bg-white justify-end ml-auto w-[120px] md:w-[100px] lg:w-[200px] md:items-end h-[1vh]  lg:mr-[12vw]  right-animation"}/>
+                    className={"bg-white justify-end ml-auto w-[120px] md:w-[100px] lg:w-[200px] md:items-end h-[8px]  lg:mr-[12vw]  right-animation"}/>
             </div>
-            {/*{!isMobile && <img src="/image/we.webp" alt="we" className={"absolute left-0 left-animation"}/>}*/}
+            {!isMobile && <img src="/image/we.webp" alt="we" className={"absolute left-0 left-animation"}/>}
         </section>
     )
 }

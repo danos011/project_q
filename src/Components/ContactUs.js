@@ -15,9 +15,7 @@ export const ContactUs = () => {
             </h1>
             <div className={"flex items-center  mx-auto h-full"}>
                 <Image
-                    className={'h-fit md:pt-[4vh] rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
-                    width={250}
-                    height={315}
+                    className={'h-fit w-[150px] h-[215px] md:w-[250px] md:h-[315px] md:pt-[4vh] rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
                     loading={'lazy'}
                     alt="Q image"
                     src="/image/q.webp"
