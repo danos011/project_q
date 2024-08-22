@@ -13,7 +13,7 @@ export const Project = ({fadeOut}) => {
 
     return (
         <section id={'project'}
-                 className={"text-white p-5 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[115vh]" +
+                 className={"text-white p-5 md:p-3 lg:pt-[7vh] lg:pr-[50px] h-[90vh] lg:h-[115vh]" +
                      " flex flex-col lg:flex-row text-center justify-center gap-3 w-full uppercase"}>
             {!isMobile &&
                 <img src="/image/project.webp" alt="project" className={"absolute right-0 top-0 right-animation"}/>}

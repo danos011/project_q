@@ -4,7 +4,7 @@ const {nextui} = require("@nextui-org/theme");
 module.exports = {
     content: [
         './src/**/*.{js,ts,jsx,tsx}',
-        './node_modules/@nextui-org/theme/dist/components/(navbar|card).js',
+        './node_modules/@nextui-org/theme/dist/components/(navbar|card|input|button).js',
     ],
     theme: {
         extend: {
