@@ -111,21 +111,21 @@ export const AboutUs = ({title, belowTitle, boxTitle, boxDescription, coloredBox
                 className={"flex flex-row gap-2 lg:gap-8 justify-between uppercase " +
                     "font-bigstem text-[3em] lg:text-[7em] leading-none w-full lg:w-[100%]"}
                 ref={ref}>
-                <div className={"mt-[13vh] flex w-[33%] flex-col lg:w-[33%]"}>
+                <div className={"mt-[13vh] flex w-[33%] flex-col lg:w-[30%]"}>
                     <div>web3</div>
                     <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25vh]"}>
                         <img src={ball}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`} alt={'ball'}/>
                     </div>
                 </div>
-                <div className={"self-start w-[33%] flex flex-col lg:w-[33%]"}>
+                <div className={"self-start w-[33%] flex flex-col lg:w-[30%]"}>
                     <div>trading</div>
                     <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25vh] "}>
                         <img alt={'invest'} src={light} loading={'lazy'}
                              className={`${hasPlayed ? "transition-opacity duration-500" : ""}`}/>
                     </div>
                 </div>
-                <div className={"self-end flex w-[33%] flex-col lg:w-[33%]"}>
+                <div className={"self-end flex w-[33%] flex-col lg:w-[30%]"}>
                     <div>invest</div>
                     <div className={"flex justify-center h-[13vh] px-[3vw] md:px-[7vw] lg:h-[25.6vh] "}>
                         <img alt={'invest'} src={invest} loading={'lazy'}

@@ -1,6 +1,7 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {NavbarItemCustom} from "./NavbarItemCustom";
 import {Navbar, NavbarContent, NavbarMenu, NavbarMenuToggle} from "@nextui-org/navbar";
+import {Link} from "react-router-dom";
 
 export const Nav = () => {
 
@@ -38,13 +39,7 @@ export const Nav = () => {
                 </NavbarContent>
                 <NavbarMenu className={"bg-transparent p-6 lg:mt-[30px] flex flex-col gap-[4rem]"}>
                     <NavbarItemCustom handleSelect={handleSelect} name={'сферы деятельности'} anchor={'aboutus'}/>
-
-                    <div className={"flex flex-col"}>
-                        <NavbarItemCustom handleSelect={handleSelect} name={'web3'} anchor={'web3'}/>
-                        <NavbarItemCustom handleSelect={handleSelect} name={'трейдинг'} anchor={'trading'}/>
-                        <NavbarItemCustom handleSelect={handleSelect} name={'инвестиции'} anchor={'invest'}/>
-                    </div>
-
+                    <NavbarItemCustom handleSelect={handleSelect} name={'база знаний'} anchor={'knowledgeBase'}/>
                     <NavbarItemCustom handleSelect={handleSelect} name={'портфолио'} anchor={'portfolio'}/>
                     <NavbarItemCustom handleSelect={handleSelect} name={'контакты'} anchor={'contactus'}/>
                 </NavbarMenu>

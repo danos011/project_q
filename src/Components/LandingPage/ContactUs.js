@@ -1,6 +1,5 @@
 import {ContactButton} from "./ContactButton";
 import {isMobile} from "react-device-detect";
-import {Image} from "@nextui-org/image";
 
 export const ContactUs = () => {
 
@@ -13,9 +12,10 @@ export const ContactUs = () => {
             <h1 className={"font-bigstem text-[5em] md:text-[8em] lg:text-9xl text-center"}>
                 contact us
             </h1>
-            <div className={"flex items-center  mx-auto h-full"}>
-                <Image
-                    className={'h-fit w-[150px] h-[215px] md:w-[250px] md:h-[315px] md:pt-[4vh] rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
+            <div className={"flex items-center mx-auto h-full"}>
+                <img
+                    className={'h-fit w-[250px] md:h-[315px] md:pt-[4vh] ' +
+                        'rounded-xl drop-shadow-[0_0_15px_rgba(255,255,255,0.8)] object-cover'}
                     loading={'lazy'}
                     alt="Q image"
                     src="/image/q.webp"
