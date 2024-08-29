@@ -5,6 +5,10 @@ export const Page3 = () => {
     return (
         <div className={"container max-w-full overflow-y-hidden"}>
             <PageNav/>
+            <style>{
+                `body {
+                        background: black;
+                    }`}</style>
             <section
                 className="p-5 lg:p-10 lg:pr-[65px] h-full lg:min-h-[100vh] flex flex-col gap-8 items-center w-full">
                 <div className={"flex flex-col gap-5 justify-between font-bigstem"}>

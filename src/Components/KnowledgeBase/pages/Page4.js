@@ -6,6 +6,10 @@ export const Page4 = () => {
     return (
         <div className={"container max-w-full overflow-y-hidden"}>
             <PageNav/>
+            <style>{
+                `body {
+                        background: black;
+                    }`}</style>
             <div className={"container max-w-full overflow-y-hidden"}>
                 <PageNav/>
                 <section
