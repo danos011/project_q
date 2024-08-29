@@ -17,12 +17,12 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path={'/'} element={<Landing/>}/>
-                    <Route path={'1'} element={<Page1/>}/>
-                    <Route path={'2'} element={<Page2/>}/>
-                    <Route path={'3'} element={<Page3/>}/>
-                    <Route path={'4'} element={<Page4/>}/>
-                    <Route path={'5'} element={<Page5/>}/>
-                    <Route path={'6'} element={<Page6/>}/>
+                    <Route path={'/1'} element={<Page1/>}/>
+                    <Route path={'/2'} element={<Page2/>}/>
+                    <Route path={'/3'} element={<Page3/>}/>
+                    <Route path={'/4'} element={<Page4/>}/>
+                    <Route path={'/5'} element={<Page5/>}/>
+                    <Route path={'/6'} element={<Page6/>}/>
                 </Routes>
             </BrowserRouter>
         </NextUIProvider>
