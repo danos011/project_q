@@ -35,7 +35,7 @@ export const PagesItems = ({item, index}) => {
             {
                 isMobile ?
                     <Link key={index} ref={ref} className="flex flex-col h-fit w-full mb-5 cursor-pointer"
-                          to={`/${item.index}`}>
+                          to={`/${item.route}`}>
                         <div
                             className={`relative flex flex-row ${index % 2 === 0 ? `justify-start ${hasPlayed ? "left-animation" : ""}`
                                 : `justify-end ${hasPlayed ? "right-animation" : ""}`}`}>
@@ -48,7 +48,7 @@ export const PagesItems = ({item, index}) => {
                     </Link>
                     :
                     <Link key={index} ref={ref} className="flex flex-col w-[calc(100%-1rem)] mb-5"
-                          to={`/${item.index}`}>
+                          to={`/${item.route}`}>
                         <div
                             className={`relative flex flex-row items-center ${index % 2 === 0 ? `justify-start ${hasPlayed ? "left-animation" : ""}`
                                 : `justify-end ${hasPlayed ? "right-animation" : ""}`}`}>

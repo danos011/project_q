@@ -3,27 +3,33 @@ import {PagesItems} from "./PagesItems";
 const linkList = [
     {
         index: 1,
-        name: "Инвестиции в криптовалюту"
+        name: "Инвестиции в криптовалюту",
+        route: "investicii-v-kriptovalyutu"
     },
     {
         index: 2,
-        name: "Гид по инвестициям"
+        name: "Гид по инвестициям",
+        route: "investicii-v-platformy-tekhnologii-i-trendy"
     },
     {
         index: 3,
-        name: "Инвестиции в стартапы"
+        name: "Инвестиции в стартапы",
+        route: "investicii-v-startapy"
     },
     {
         index: 4,
-        name: "Инвестиции в активы"
+        name: "Инвестиции в активы",
+        route: "investicii-v-aktivy"
     },
     {
         index: 5,
-        name: "Цифровые инвестиции"
+        name: "Цифровые инвестиции",
+        route: "cifrovye-investicii"
     },
     {
         index: 6,
-        name: "Инвестиции в технологии"
+        name: "Инвестиции в технологии",
+        route: "investicii-v-tekhnologii"
     },
 ]
 
