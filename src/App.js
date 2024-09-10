@@ -22,7 +22,7 @@ function App() {
                     <Route path={'/investicii-v-startapy'} element={<Page3/>}/>
                     <Route path={'/investicii-v-aktivy'} element={<Page4/>}/>
                     <Route path={'/cifrovye-investicii'} element={<Page5/>}/>
-                    <Route path={'/nvesticii-v-tekhnologii'} element={<Page6/>}/>
+                    <Route path={'/investicii-v-tekhnologii'} element={<Page6/>}/>
                 </Routes>
             </BrowserRouter>
         </NextUIProvider>

@@ -1,5 +1,7 @@
 import {Card, CardBody} from "@nextui-org/card";
 import {PageNav} from "./PageNav";
+import {Link} from "react-router-dom";
+import {Footer} from "../Footer";
 
 export const Page2 = () => {
     return (
@@ -251,6 +253,7 @@ export const Page2 = () => {
                     </CardBody>
                 </Card>
             </section>
+            <Footer next={'investicii-v-startapy'} prev={'investicii-v-kriptovalyutu'}/>
         </div>
     )
 }

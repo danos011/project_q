@@ -1,5 +1,6 @@
 import {Card, CardBody} from "@nextui-org/card";
 import {PageNav} from "./PageNav";
+import {Footer} from "../Footer";
 
 export const Page3 = () => {
     return (
@@ -270,6 +271,7 @@ export const Page3 = () => {
                     </CardBody>
                 </Card>
             </section>
+            <Footer next={'investicii-v-platformy-tekhnologii-i-trendy'} prev={'investicii-v-aktivy'}/>
         </div>
     )
 }
