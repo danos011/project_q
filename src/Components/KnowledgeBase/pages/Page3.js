@@ -271,7 +271,7 @@ export const Page3 = () => {
                     </CardBody>
                 </Card>
             </section>
-            <Footer next={'investicii-v-platformy-tekhnologii-i-trendy'} prev={'investicii-v-aktivy'}/>
+            <Footer next={'investicii-v-aktivy'} prev={'investicii-v-platformy-tekhnologii-i-trendy'}/>
         </div>
     )
 }

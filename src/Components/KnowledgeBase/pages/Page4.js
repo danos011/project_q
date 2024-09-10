@@ -285,7 +285,7 @@ export const Page4 = () => {
                         </CardBody>
                     </Card>
                 </section>
-                <Footer next={'investicii-v-platformy-tekhnologii-i-trendy'} prev={'investicii-v-aktivy'}/>
+                <Footer next={'cifrovye-investicii'} prev={'investicii-v-startapy'}/>
             </div>
         </div>
     )
